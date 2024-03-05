@@ -1,0 +1,126 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #000;
+}
+
+.navbar {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column; /* Altera a direção do flex para coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    background-color: #000; /* Mantenha a cor de fundo do cabeçalho */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#search-bar {
+    width: 40%; /* Ajuste a largura conforme necessário */
+    padding: 8px;
+    margin-top: 20px; /* Adiciona uma margem acima da barra de busca */
+    margin-bottom: 20px; /* Adiciona uma margem acima da barra de busca */
+    border: 2px solid #fff; /* Ajusta a cor da borda conforme necessário */
+    border-radius: 20px; /* Adiciona bordas arredondadas */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    transition: background-color 0.2s;
+}
+
+.navbar a:hover {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.products-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* Impede que os itens se envolvam para a próxima linha */
+    overflow-x: auto; /* Permite rolagem horizontal se os itens excederem a largura da tela */
+    padding: 20px 0; /* Adiciona um pouco de espaço acima e abaixo dos produtos */
+}
+
+.product-card {
+    margin: 10px; /* Adiciona um espaço entre os cartões de produto */
+    padding: 20px;
+    border: 1px solid #e6e6e6;
+    background-color: #ffffff;
+    width: calc(33.333% - 22px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    flex: auto; /* Impede que os cartões se estiquem ou encolham, mantendo o tamanho definido */
+    min-width: 240px; /* Define uma largura mínima para cada cartão de produto */
+}
+
+.product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 400px;
+    height: 100vh;
+    background-color: white;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #69c9d0; /* TikTok's distinctive blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #57b3c6;
+}
+
+.cart-modal button.checkout-btn {
+    background-color: #fe2c55; /* A vibrant color for checkout button */
+}
+
+.cart-modal button.checkout-btn:hover {
+    background-color: #e02648;
+}
+
+#cart-icon {
+    font-size: 24px; /* Tamanho do ícone do carrinho */
+    cursor: pointer;
+    position: relative; /* Posição relativa para posicionar corretamente o círculo de destaque */
+    margin-left: 20px; /* Adiciona margem à esquerda do ícone do carrinho */
+    right: 20px; /* Posiciona o ícone do carrinho à direita */
+    top: 20px; /* Posiciona o ícone do carrinho no topo do cabeçalho */
+}
+
+.product-image {
+    width: 100%; /* Faz a imagem preencher a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover; /* Garante que a imagem cubra o espaço disponível sem distorção */
+    border-radius: 8px 8px 0 0; /* Arredonda os cantos superiores da imagem */
+}
