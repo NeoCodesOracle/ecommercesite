@@ -34,9 +34,14 @@ function checkout() {
     alert("Checkout not implemented yet.");
 }
 
-function addToCart(productName) {
-    cart.push(productName);
-    document.getElementById('cart-count').innerText = cart.length;
-    document.getElementById('cart-icon').setAttribute('data-count', cart.length); // Atualiza o contador no ícone do carrinho
-    alert(`${productName} added to cart`);
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let product = { id: productId, name: "Nome do Produto", price: "$100", imageUrl: "img/product.jpg" };
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.location.href = 'cart.html'; // Redireciona para a página do carrinho
+}
+
+function openProductPage(productId) {
+    window.location.href = `product-details.html?id=${productId}`;
 }

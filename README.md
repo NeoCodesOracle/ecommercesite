@@ -1,2 +1,2 @@
 # ecommercesite
-Simple ecommerce website to test Tiktok PIxel
+Simple E-Commerce Website to test Tiktok Pixel.

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+		!function (w, d, t) {
+		  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++
+)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=i+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+		
+		  ttq.load('');
+		  ttq.page();
+		}(window, document, 'ttq');
+
+        ttq.track('ViewContent', {
+            content_id: 'prod0001',
+            content_type: 'product',
+            content_name: 'Coffee Machine',
+            price: '100'
+
+        })
+
+        ttq.identify({
+            email: "customeremail@test.com", 
+            phone_number: "+5512345678",
+            external_id: "customerexternalId", 
+    })
+    </script>
+
+</head>
+<body>
+
+<div class="page-container">
+    <!-- Container de Detalhes do Produto -->
+    <div class="product-details-container">
+        <img id="product-image" src="img/coffee.webp" alt="Imagem do Produto" class="product-image">
+        <h2 id="product-name">Coffee Machine</h2>
+        <p id="product-price">Price: $100.00</p>
+        <p id="product-qty">Quantity: 01</p>
+        <p id="product-description">'Experience the perfect blend of convenience and quality with our Electric Coffee Maker. Engineered for the coffee aficionado, this sleek and modern coffee maker is designed to brew rich, flavorful coffee with the push of a button. Its compact design makes it a perfect fit for any kitchen, while the user-friendly interface ensures a seamless brewing experience. Whether you're rushing out the door or enjoying a lazy Sunday morning, our Electric Coffee Maker promises a delicious cup of coffee, every time.'</p>
+        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+    </div>
+</div>
+
+<script src="js/product-details.js"></script>
+</body>
+</html>
